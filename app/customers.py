@@ -42,6 +42,7 @@ class Customer:
                 cheapest_price = self.total_spent(shop)
                 cheapest_shop = shop
         if self.money >= cheapest_price:
+            self.location = cheapest_shop.location
             self.money -= cheapest_price
             print(f"{self.name} rides to {cheapest_shop.name}\n")
             return cheapest_shop
